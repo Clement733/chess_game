@@ -17,12 +17,12 @@ pl_hdr_txt = tk.Label(g_w,
                       foreground="green",
                       relief="raised",
                       height=1,
-                      width=60,
+                      width=55,
                       bd=4,
                       font=("TimesNewRoman", 32, "bold"),
                       textvariable=pl_hdr)
 
-pl_hdr_txt.pack()
+pl_hdr_txt.grid(columnspan=2)
 
 pl_but=tk.Button(g_w,
                  anchor="sw",
@@ -36,7 +36,8 @@ pl_but=tk.Button(g_w,
                  justify="center",
                  command=bd)
 
-pl_but.pack()
+pl_but.grid(row=5,
+            column=0)
 
 plcomp_but=tk.Button(g_w,
                      anchor="se",
@@ -50,6 +51,8 @@ plcomp_but=tk.Button(g_w,
                      justify="center",
                      command=bd)
 
-plcomp_but.pack(anchor="s")
+plcomp_but.grid(row=5,
+                column=1,
+                sticky="sw")
 
 g_w.mainloop()
